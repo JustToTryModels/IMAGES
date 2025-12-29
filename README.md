@@ -13,7 +13,7 @@
 
 [Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/) • [DistilGPT2 Model](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned) • [Classifier Model](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
 
-<img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Google_AI_Studio_2025-10-25T04_37_52.808Z.png?raw=true" alt="Ticket" width="450" />
+<img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Google_AI_Studio_2025-10-25T04_37_52.808Z.png?raw=true" alt="Ticket" width="650" />
 
 </div>
 
