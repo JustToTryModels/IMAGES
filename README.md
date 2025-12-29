@@ -382,13 +382,13 @@ Training Loss Over Epochs:
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
 │  Step 1: Query Length Validation                                        │
-│  ├── Input:  "How do I cancle my tiket for the consert?"               │
+│  ├── Input:  "How do I cancle my tiket for the consert?"                │
 │  ├── Max Tokens: 128                                                    │
-│  └── Status: ✅ PASS (15 tokens)                                        │
+│  └── Status: ✅ PASS (15 tokens)                                       │
 │                                                                         │
 │  Step 2: Spell Correction                                               │
-│  ├── Input:  "How do I cancle my tiket for the consert?"               │
-│  └── Output: "How do I cancel my ticket for the concert?"              │
+│  ├── Input:  "How do I cancle my tiket for the consert?"                │
+│  └── Output: "How do I cancel my ticket for the concert?"               │
 │                                                                         │
 │  Step 3: OOD Classification                                             │
 │  ├── Model: DistilBERT                                                  │
