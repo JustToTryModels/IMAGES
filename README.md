@@ -40,29 +40,6 @@
 
 The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **query validation**, **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
 
-### 🎯 What Makes This Special?
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                        │
-│   User Query ──▶ Length Check ──▶ Spell Corrector ──▶ OOD Classifier                 │
-│                       │                  │                  │                          │
-│                       ▼                  ▼                  ▼                          │
-│                 Query OK?         Corrected Query      In-Domain ──▶ DistilGPT2       │
-│                       │                                    │              │            │
-│                       ▼                                    ▼              ▼            │
-│                 Error Message                        Out-of-Domain    GLiNER NER       │
-│                                                           │              │             │
-│                                                           ▼              ▼             │
-│                                                    Polite Rejection  Dynamic           │
-│                                                       Response      Placeholders       │
-│                                                                          │             │
-│                                                                          ▼             │
-│                                                                    Final Response      │
-│                                                                                        │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
 ---
 
 ## ✨ Key Features
@@ -764,22 +741,6 @@ Advanced-Event-Ticketing-Chatbot/
 ├── 📄 README.md                        # This file
 └── 📄 LICENSE                          # MIT License
 ```
-
----
-
-## 🔄 Processing Order Rationale
-
-The pipeline processes queries in a specific order for optimal efficiency:
-
-```
-1. Query Validation  →  2. Spell Correction  →  3. Classification  →  4. NER  →  5. Generation
-```
-
-**Why Query Validation First?**
-- ⚡ **Efficiency**: No point running spell correction on oversized queries
-- 💾 **Resource Saving**: Spell correction model doesn't waste compute on invalid inputs
-- 🚀 **Faster Feedback**: Users get immediate feedback about query length
-- 🛡️ **Protection**: Prevents model overload from extremely long inputs
 
 ---
 
