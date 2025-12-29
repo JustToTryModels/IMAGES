@@ -716,34 +716,22 @@ Real-time word-by-word display
 ```
 Advanced-Event-Ticketing-Chatbot/
 │
-├── 📂 models/
-│   ├── distilgpt2_finetuned/          # Fine-tuned response generator
-│   └── distilbert_classifier/          # Query classifier
+├── Data/                       # 1. Dataset Repository
+│   ├── Bitext-events-ticketing-llm-chatbot-training-dataset.csv   # Response generation data
+│   ├── Full_data_for_classification_55413.csv                     # Main classifier dataset
+│   ├── extra-large-out-of-domain.csv                              # OOD samples for robustness
+│   ├── identity_creator_Extended_2892.csv                         # Personality & identity data
+│   └── Google_AI_Studio_2025-10-25T04_37_52.808Z.png              # Chatbot AI Image
 │
-├── 📂 notebooks/
-│   ├── 01_data_preparation.ipynb       # Data preprocessing
-│   ├── 02_gpt2_training.ipynb          # Response generator training
-│   ├── 03_classifier_training.ipynb    # Classifier training
-│   └── 04_evaluation.ipynb             # Model evaluation
+├── Notebook/                   # 2. Model Training
+│   ├── Advanced_Event_Ticketing_Chatbot_DistilGPT2_FineTuned.ipynb # Response model training
+│   ├── Chatbot_Query_Classifier_DistilBERT_Fine_tuned.ipynb        # Intent model training
+│   └── Inference_(DistilBERT+DistilGPT2).ipynb                   # Local model testing
 │
-├── 📂 src/
-│   ├── __init__.py
-│   ├── model_loader.py                 # Model loading utilities
-│   ├── response_generator.py           # Response generation logic
-│   ├── query_classifier.py             # OOD classification
-│   ├── token_validator.py              # Token length validation
-│   ├── spell_corrector.py              # Spell correction module
-│   ├── ner_processor.py                # GLiNER entity extraction
-│   └── placeholder_handler.py          # Placeholder replacement
-│
-├── 📂 data/
-│   ├── raw/                            # Raw training data
-│   └── processed/                      # Preprocessed datasets
-│
-├── 📄 app.py                           # Streamlit application
-├── 📄 requirements.txt                 # Dependencies
-├── 📄 README.md                        # This file
-└── 📄 LICENSE                          # MIT License
+├── Advanced_Chatbot.py         # 3. Main Streamlit Application
+├── requirements.txt            # 4. Project Dependencies
+├── LICENSE                     # 5. MIT License
+└── README.md                   # 6. Documentation
 ```
 
 ---
