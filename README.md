@@ -31,6 +31,7 @@
 - [Performance Metrics](#-performance-metrics)
 - [Demo](#-demo)
 - [Project Structure](#-project-structure)
+- [Future Enhancements](#-future-enhancements)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
@@ -38,19 +39,19 @@
 
 ## 🌟 Overview
 
-The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **token validation**, **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
+The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **query validation**, **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
 
 ### 🎯 What Makes This Special?
 
 ```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                        │
-│   User Query ──▶ Token Check ──▶ Spell Corrector ──▶ OOD Classifier                  │
-│                       │                  │                  │                          │
-│                       ▼                  ▼                  ▼                          │
-│                Token Limit OK?    Corrected Query      In-Domain ──▶ DistilGPT2       │
-│                       │                                    │              │            │
-│                       ▼                                    ▼              ▼            │
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                         │
+│   User Query ──▶ Length Check ──▶ Spell Corrector ──▶ OOD Classifier                   │
+│                       │                  │                  │                           │
+│                       ▼                  ▼                  ▼                           │
+│                 Query OK?         Corrected Query      In-Domain ──▶ DistilGPT2        │
+│                       │                                    │              │             │
+│                       ▼                                    ▼              ▼             │
 │                 Error Message                        Out-of-Domain    GLiNER NER       │
 │                                                           │              │             │
 │                                                           ▼              ▼             │
@@ -59,8 +60,8 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 │                                                                          │             │
 │                                                                          ▼             │
 │                                                                    Final Response      │
-│                                                                                        │
-└────────────────────────────────────────────────────────────────────────────────────────┘
+│                                                                                         │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -97,7 +98,7 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 </td>
 <td width="50%">
 
-### 📏 Token Length Validation
+### 📏 Query Length Validation
 - **First check** before any processing
 - Automatic query length checking (max 128 tokens)
 - User-friendly error messages for oversized queries
@@ -110,7 +111,7 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 
 ### ✏️ Automatic Spell Correction
 - **T5-based spell corrector** for input preprocessing
-- Applied only after token validation passes
+- Applied only after query validation passes
 - Handles typos and misspellings seamlessly
 - Improves query understanding accuracy
 
@@ -133,7 +134,7 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 
 ```mermaid
 graph TB
-    A[👤 User Input] --> B{📏 Token Length Check}
+    A[👤 User Input] --> B{📏 Query Length Check}
     B -->|Too Long| C[⚠️ Error Message]
     B -->|OK| D[✏️ Spell Corrector]
     D --> E{🔍 DistilBERT Classifier}
@@ -161,7 +162,7 @@ graph TB
 
 | Component | Model/Technology | Purpose |
 |-----------|-----------------|---------|
-| **Token Validator** | DistilGPT2 Tokenizer | Query length validation (max 128 tokens) |
+| **Query Validator** | DistilGPT2 Tokenizer | Query length validation (max 128 tokens) |
 | **Spell Corrector** | oliverguhr/spelling-correction-english-base | Input text correction and normalization |
 | **Query Classifier** | DistilBERT (fine-tuned) | Binary classification for OOD detection |
 | **Response Generator** | DistilGPT2 (fine-tuned) | Domain-specific response generation |
@@ -173,7 +174,7 @@ graph TB
 
 ## 🤖 Model Details
 
-### 1️⃣ Token Length Validator
+### 1️⃣ Query Length Validator
 
 <details>
 <summary><b>Click to expand details</b></summary>
@@ -206,7 +207,7 @@ if token_count > max_tokens:
 
 **Model:** `oliverguhr/spelling-correction-english-base`
 
-**Purpose:** Automatically corrects spelling errors and typos in user queries after token validation.
+**Purpose:** Automatically corrects spelling errors and typos in user queries after query validation.
 
 **Features:**
 - Text-to-text generation pipeline
@@ -380,7 +381,7 @@ Training Loss Over Epochs:
 │                     Query Processing Pipeline                           │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  Step 1: Token Length Validation                                        │
+│  Step 1: Query Length Validation                                        │
 │  ├── Input:  "How do I cancle my tiket for the consert?"               │
 │  ├── Max Tokens: 128                                                    │
 │  └── Status: ✅ PASS (15 tokens)                                        │
@@ -699,7 +700,7 @@ def compute_metrics(eval_pred):
 <tr>
 <td align="center" width="25%">
 
-**📏 Token Validation**
+**📏 Query Validation**
 
 Length check before processing
 
@@ -767,15 +768,44 @@ Advanced-Event-Ticketing-Chatbot/
 
 ---
 
+## 🔮 Future Enhancements
+
+<table>
+<tr>
+<td>
+
+### 🎯 Short-term Goals
+- [ ] Multi-turn conversation support
+- [ ] Voice input integration
+- [ ] Mobile-responsive design
+- [ ] Rate limiting and caching
+- [ ] Confidence score display for entities
+
+</td>
+<td>
+
+### 🚀 Long-term Goals
+- [ ] Multilingual support with translation
+- [ ] Integration with ticketing APIs
+- [ ] Admin dashboard for analytics
+- [ ] Custom model fine-tuning interface
+- [ ] RAG-based knowledge augmentation
+
+</td>
+</tr>
+</table>
+
+---
+
 ## 🔄 Processing Order Rationale
 
 The pipeline processes queries in a specific order for optimal efficiency:
 
 ```
-1. Token Validation  →  2. Spell Correction  →  3. Classification  →  4. NER  →  5. Generation
+1. Query Validation  →  2. Spell Correction  →  3. Classification  →  4. NER  →  5. Generation
 ```
 
-**Why Token Validation First?**
+**Why Query Validation First?**
 - ⚡ **Efficiency**: No point running spell correction on oversized queries
 - 💾 **Resource Saving**: Spell correction model doesn't waste compute on invalid inputs
 - 🚀 **Faster Feedback**: Users get immediate feedback about query length
