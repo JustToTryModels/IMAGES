@@ -479,20 +479,20 @@ streamlit run app.py
 
 ```
 How can I cancle my tiket 
-for the upcoming event in Mumabi?
+for the upcoming event in lundon?
 ```
 
 </td>
 <td>
 
 ```
-To cancel your ticket for the event in Mumbai, 
+To cancel your ticket for the event in London, 
 kindly adhere to the following steps:
 
 1. Access website and log into your account.
 2. Proceed to the Ticket Cancellation section.
 3. Locate your upcoming events and choose 
-   the event in Mumbai.
+   the event in London.
 4. Select the Cancel Ticket option.
 5. Follow the on-screen instructions to 
    confirm your cancellation.
@@ -500,7 +500,7 @@ kindly adhere to the following steps:
 If you face any difficulties, do not hesitate 
 to reach out to our customer support team.
 ```
-*(Note: Typos "cancle", "tiket", "Mumabi" auto-corrected)*
+*(Note: Typos "cancle", "tiket", "lundon" auto-corrected)*
 
 </td>
 </tr>
