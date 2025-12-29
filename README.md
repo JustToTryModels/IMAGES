@@ -214,7 +214,7 @@ Output: "How do I cancel my ticket?"
 
 **Configuration:**
 ```python
-labels = ["event", "city", "location", "venue"]
+labels = ["event", "city", "location", "concert", "festival", "show", "match", "game", "venue"]
 threshold = 0.4  # Confidence threshold for entity extraction
 ```
 
