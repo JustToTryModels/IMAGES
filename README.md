@@ -40,6 +40,10 @@
 
 The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **query validation**, **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
 
+### 🎯 What Makes This Special?
+
+This system employs a rigorous 5-step processing pipeline to ensure accurate and efficient responses. By validating inputs early and leveraging NLP models like **DistilGPT2** and **GLiNER**, it achieves high accuracy while gracefully handling out-of-domain queries and spelling errors.
+
 ---
 
 ## ✨ Key Features
