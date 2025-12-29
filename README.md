@@ -40,23 +40,23 @@
 
 ## 🌟 Overview
 
-The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
+The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-powered solution designed to handle customer inquiries related to event ticketing. Built with a multi-model architecture, this system features **token validation**, **spell correction**, **intelligent query classification**, **advanced entity extraction with GLiNER**, and **contextually relevant response generation**.
 
 ### 🎯 What Makes This Special?
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                         │
-│   User Query ──▶ Spell Corrector ──▶ Token Check ──▶ OOD Classifier                    │
-│                       │                   │                  │                          │
-│                       ▼                   ▼                  ▼                          │
-│              Corrected Query      Token Limit OK?      In-Domain ──▶ DistilGPT2        │
-│                                         │                  │              │             │
-│                                         ▼                  ▼              ▼             │
-│                                   Error Message      Out-of-Domain    GLiNER NER       │
+│   User Query ──▶ Token Check ──▶ Spell Corrector ──▶ OOD Classifier                    │
+│                       │                  │                  │                           │
+│                       ▼                  ▼                  ▼                           │
+│                Token Limit OK?    Corrected Query      In-Domain ──▶ DistilGPT2        │
+│                       │                                    │              │             │
+│                       ▼                                    ▼              ▼             │
+│                 Error Message                        Out-of-Domain    GLiNER NER       │
 │                                                           │              │             │
 │                                                           ▼              ▼             │
-│                                                    Polite Rejection  Dynamic          │
+│                                                    Polite Rejection  Dynamic           │
 │                                                       Response      Placeholders       │
 │                                                                          │             │
 │                                                                          ▼             │
@@ -99,20 +99,22 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 </td>
 <td width="50%">
 
-### ✏️ Automatic Spell Correction
-- **T5-based spell corrector** for input preprocessing
-- Handles typos and misspellings seamlessly
-- Improves query understanding accuracy
+### 📏 Token Length Validation
+- **First check** before any processing
+- Automatic query length checking (max 128 tokens)
+- User-friendly error messages for oversized queries
+- Prevents unnecessary computation on invalid queries
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 📏 Token Length Validation
-- Automatic query length checking (max 128 tokens)
-- User-friendly error messages for oversized queries
-- Prevents model overload and ensures quality responses
+### ✏️ Automatic Spell Correction
+- **T5-based spell corrector** for input preprocessing
+- Applied only after token validation passes
+- Handles typos and misspellings seamlessly
+- Improves query understanding accuracy
 
 </td>
 <td width="50%">
@@ -133,22 +135,22 @@ The **Advanced Event Ticketing Customer Support Chatbot** is a sophisticated AI-
 
 ```mermaid
 graph TB
-    A[👤 User Input] --> B[✏️ Spell Corrector]
-    B --> C{📏 Token Length Check}
-    C -->|Too Long| D[⚠️ Error Message]
-    C -->|OK| E{🔍 DistilBERT Classifier}
+    A[👤 User Input] --> B{📏 Token Length Check}
+    B -->|Too Long| C[⚠️ Error Message]
+    B -->|OK| D[✏️ Spell Corrector]
+    D --> E{🔍 DistilBERT Classifier}
     E -->|Out-of-Domain| F[🚫 Polite Fallback Response]
     E -->|In-Domain| G[🏷️ GLiNER NER Processing]
     G --> H[🤖 DistilGPT2 Response Generation]
     H --> I[🔄 Placeholder Replacement]
     I --> J[💬 Final Response]
-    D --> J
+    C --> J
     F --> J
     
     style A fill:#e1f5fe
-    style B fill:#fff9c4
-    style C fill:#f3e5f5
-    style D fill:#ffcdd2
+    style B fill:#f3e5f5
+    style C fill:#ffcdd2
+    style D fill:#fff9c4
     style E fill:#fff3e0
     style F fill:#ffebee
     style G fill:#e8eaf6
@@ -161,6 +163,7 @@ graph TB
 
 | Component | Model/Technology | Purpose |
 |-----------|-----------------|---------|
+| **Token Validator** | DistilGPT2 Tokenizer | Query length validation (max 128 tokens) |
 | **Spell Corrector** | oliverguhr/spelling-correction-english-base | Input text correction and normalization |
 | **Query Classifier** | DistilBERT (fine-tuned) | Binary classification for OOD detection |
 | **Response Generator** | DistilGPT2 (fine-tuned) | Domain-specific response generation |
@@ -172,14 +175,40 @@ graph TB
 
 ## 🤖 Model Details
 
-### 1️⃣ Spell Corrector: T5-based Model
+### 1️⃣ Token Length Validator
+
+<details>
+<summary><b>Click to expand details</b></summary>
+
+**Tokenizer:** DistilGPT2 Tokenizer (same as response generator)
+
+**Purpose:** Validates query length before any processing to ensure efficient resource usage.
+
+**Configuration:**
+```python
+max_tokens = 128
+tokens = query_tokenizer.encode(query, add_special_tokens=True)
+token_count = len(tokens)
+if token_count > max_tokens:
+    return None, "⚠️ Your question is too long..."
+```
+
+**Benefits:**
+- Prevents unnecessary spell correction on invalid queries
+- Saves computational resources
+- Provides immediate user feedback
+- Ensures model doesn't receive oversized inputs
+
+</details>
+
+### 2️⃣ Spell Corrector: T5-based Model
 
 <details>
 <summary><b>Click to expand details</b></summary>
 
 **Model:** `oliverguhr/spelling-correction-english-base`
 
-**Purpose:** Automatically corrects spelling errors and typos in user queries before processing.
+**Purpose:** Automatically corrects spelling errors and typos in user queries after token validation.
 
 **Features:**
 - Text-to-text generation pipeline
@@ -195,7 +224,7 @@ Output: "How do I cancel my ticket?"
 
 </details>
 
-### 2️⃣ Entity Extractor: GLiNER
+### 3️⃣ Entity Extractor: GLiNER
 
 <details>
 <summary><b>Click to expand details</b></summary>
@@ -210,11 +239,11 @@ labels = ["event", "city", "location", "venue"]
 threshold = 0.4  # Confidence threshold for entity extraction
 ```
 
-**Advantages over spaCy:**
+**Key Features:**
 - Zero-shot capability (no training required for new entity types)
 - Lightweight and fast inference
 - Flexible label definitions
-- Better handling of domain-specific entities
+- Excellent handling of domain-specific entities
 
 **Example:**
 ```
@@ -227,7 +256,7 @@ Output: {
 
 </details>
 
-### 3️⃣ Response Generator: DistilGPT2
+### 4️⃣ Response Generator: DistilGPT2
 
 <details>
 <summary><b>Click to expand training details</b></summary>
@@ -250,7 +279,7 @@ TrainingArguments(
 ```python
 model.generate(
     max_length=256,
-    temperature=0.5,    # Slightly higher for more natural responses
+    temperature=0.5,
     top_p=0.95,
     do_sample=True,
     pad_token_id=tokenizer.eos_token_id
@@ -274,7 +303,7 @@ model.generate(
 
 </details>
 
-### 4️⃣ Query Classifier: DistilBERT
+### 5️⃣ Query Classifier: DistilBERT
 
 <details>
 <summary><b>Click to expand training details</b></summary>
@@ -353,13 +382,14 @@ Training Loss Over Epochs:
 │                     Query Processing Pipeline                           │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  Step 1: Spell Correction                                               │
+│  Step 1: Token Length Validation                                        │
 │  ├── Input:  "How do I cancle my tiket for the consert?"               │
-│  └── Output: "How do I cancel my ticket for the concert?"              │
-│                                                                         │
-│  Step 2: Token Length Validation                                        │
 │  ├── Max Tokens: 128                                                    │
 │  └── Status: ✅ PASS (15 tokens)                                        │
+│                                                                         │
+│  Step 2: Spell Correction                                               │
+│  ├── Input:  "How do I cancle my tiket for the consert?"               │
+│  └── Output: "How do I cancel my ticket for the concert?"              │
 │                                                                         │
 │  Step 3: OOD Classification                                             │
 │  ├── Model: DistilBERT                                                  │
@@ -525,10 +555,15 @@ gliner_model = GLiNER.from_pretrained("gliner-community/gliner_small-v2.5")
 gpt2_model = GPT2LMHeadModel.from_pretrained("IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned")
 gpt2_tokenizer = GPT2Tokenizer.from_pretrained("IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned")
 
-def preprocess_query(query):
-    """Correct spelling and normalize query"""
-    query = query.strip()
-    query = query[0].upper() + query[1:].lower()
+def validate_token_length(query, tokenizer, max_tokens=128):
+    """Validate query token length before processing"""
+    tokens = tokenizer.encode(query, add_special_tokens=True)
+    if len(tokens) > max_tokens:
+        return None, f"Query too long ({len(tokens)} tokens, max {max_tokens})"
+    return query, None
+
+def correct_spelling(query, spell_corrector):
+    """Correct spelling after token validation"""
     result = spell_corrector(query, max_length=256)
     return result[0]['generated_text'].strip()
 
@@ -562,14 +597,23 @@ def generate_response(instruction, model, tokenizer, max_length=256):
 
 # Example usage
 query = "How can I cancle my tiket for the Coldplay consert?"
-corrected_query = preprocess_query(query)
-print(f"Corrected: {corrected_query}")
 
-entities = extract_entities(corrected_query, gliner_model)
-print(f"Entities: {entities}")
-
-response = generate_response(corrected_query, gpt2_model, gpt2_tokenizer)
-print(f"Response: {response}")
+# Step 1: Token validation
+validated_query, error = validate_token_length(query, gpt2_tokenizer)
+if error:
+    print(f"Error: {error}")
+else:
+    # Step 2: Spell correction
+    corrected_query = correct_spelling(validated_query, spell_corrector)
+    print(f"Corrected: {corrected_query}")
+    
+    # Step 3: Entity extraction
+    entities = extract_entities(corrected_query, gliner_model)
+    print(f"Entities: {entities}")
+    
+    # Step 4: Response generation
+    response = generate_response(corrected_query, gpt2_model, gpt2_tokenizer)
+    print(f"Response: {response}")
 ```
 
 ---
@@ -655,25 +699,32 @@ def compute_metrics(eval_pred):
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center" width="25%">
+
+**📏 Token Validation**
+
+Length check before processing
+
+</td>
+<td align="center" width="25%">
 
 **✏️ Spell Correction**
 
-Automatic typo correction before processing
+Automatic typo correction
 
 </td>
-<td align="center" width="33%">
+<td align="center" width="25%">
 
 **🏷️ Entity Extraction**
 
-GLiNER-powered event and location detection
+GLiNER-powered detection
 
 </td>
-<td align="center" width="33%">
+<td align="center" width="25%">
 
 **💬 Streaming Response**
 
-Real-time word-by-word response display
+Real-time word-by-word display
 
 </td>
 </tr>
@@ -701,6 +752,7 @@ Advanced-Event-Ticketing-Chatbot/
 │   ├── model_loader.py                 # Model loading utilities
 │   ├── response_generator.py           # Response generation logic
 │   ├── query_classifier.py             # OOD classification
+│   ├── token_validator.py              # Token length validation
 │   ├── spell_corrector.py              # Spell correction module
 │   ├── ner_processor.py                # GLiNER entity extraction
 │   └── placeholder_handler.py          # Placeholder replacement
@@ -746,16 +798,19 @@ Advanced-Event-Ticketing-Chatbot/
 
 ---
 
-## 🆚 Comparison: GLiNER vs spaCy
+## 🔄 Processing Order Rationale
 
-| Feature | GLiNER (Current) | spaCy (Previous) |
-|---------|-----------------|------------------|
-| **Zero-shot Capability** | ✅ Yes | ❌ No |
-| **Model Size** | ~100MB | ~500MB (trf) |
-| **Custom Entity Types** | ✅ Flexible labels | ❌ Fixed categories |
-| **Threshold Control** | ✅ Adjustable | ❌ N/A |
-| **Domain Adaptation** | ✅ Easy | ⚠️ Requires retraining |
-| **Inference Speed** | Fast | Moderate |
+The pipeline processes queries in a specific order for optimal efficiency:
+
+```
+1. Token Validation  →  2. Spell Correction  →  3. Classification  →  4. NER  →  5. Generation
+```
+
+**Why Token Validation First?**
+- ⚡ **Efficiency**: No point running spell correction on oversized queries
+- 💾 **Resource Saving**: Spell correction model doesn't waste compute on invalid inputs
+- 🚀 **Faster Feedback**: Users get immediate feedback about query length
+- 🛡️ **Protection**: Prevents model overload from extremely long inputs
 
 ---
 
