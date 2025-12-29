@@ -32,7 +32,6 @@
 - [Demo](#-demo)
 - [Project Structure](#-project-structure)
 - [Future Enhancements](#-future-enhancements)
-- [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
@@ -814,25 +813,6 @@ The pipeline processes queries in a specific order for optimal efficiency:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** your feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow PEP 8 style guidelines
-- Add tests for new features
-- Update documentation as needed
-- Use meaningful commit messages
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -862,24 +842,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <br>
 
 **Built with ❤️ by [Marpaka Pradeep Sai](https://github.com/MarpakaPradeepSai)**
-
-<br>
-
-[![GitHub followers](https://img.shields.io/github/followers/MarpakaPradeepSai?style=social)](https://github.com/MarpakaPradeepSai)
-[![Twitter Follow](https://img.shields.io/twitter/follow/MarpakaPradeep?style=social)](https://twitter.com/MarpakaPradeep)
-
-</div>
-
----
-
-<div align="center">
-
-```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                                                                            │
-│   "The best way to predict the future is to create it." - Peter Drucker   │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
-```
 
 </div>
