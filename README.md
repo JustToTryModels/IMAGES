@@ -767,8 +767,6 @@ Advanced-Event-Ticketing-Chatbot/
 
 ---
 
----
-
 ## 🔄 Processing Order Rationale
 
 The pipeline processes queries in a specific order for optimal efficiency:
