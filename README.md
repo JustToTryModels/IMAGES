@@ -31,7 +31,6 @@
 - [Performance Metrics](#-performance-metrics)
 - [Demo](#-demo)
 - [Project Structure](#-project-structure)
-- [Future Enhancements](#-future-enhancements)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
 
@@ -765,35 +764,6 @@ Advanced-Event-Ticketing-Chatbot/
 ├── 📄 README.md                        # This file
 └── 📄 LICENSE                          # MIT License
 ```
-
----
-
-## 🔮 Future Enhancements
-
-<table>
-<tr>
-<td>
-
-### 🎯 Short-term Goals
-- [ ] Multi-turn conversation support
-- [ ] Voice input integration
-- [ ] Mobile-responsive design
-- [ ] Rate limiting and caching
-- [ ] Confidence score display for entities
-
-</td>
-<td>
-
-### 🚀 Long-term Goals
-- [ ] Multilingual support with translation
-- [ ] Integration with ticketing APIs
-- [ ] Admin dashboard for analytics
-- [ ] Custom model fine-tuning interface
-- [ ] RAG-based knowledge augmentation
-
-</td>
-</tr>
-</table>
 
 ---
 
