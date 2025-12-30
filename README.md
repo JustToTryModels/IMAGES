@@ -547,7 +547,7 @@ def correct_spelling(query, spell_corrector):
 
 def extract_entities(query, model):
     """Extract entities using GLiNER"""
-    labels = ["event", "city", "location", "venue"]
+    labels = ["event", "city", "location", "concert", "festival", "show", "match", "game"]
     entities = model.predict_entities(query, labels, threshold=0.4)
     return entities
 
