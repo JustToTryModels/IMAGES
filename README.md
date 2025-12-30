@@ -669,6 +669,7 @@ def compute_metrics(eval_pred):
 
 <div align="center">
 <img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF.gif?raw=true" alt="Ticket" width="650" />
+<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Ticket" width="650" />
 
 ### 🌐 [Try the Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/)
 
