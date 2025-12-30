@@ -671,8 +671,8 @@ def compute_metrics(eval_pred):
 
 <table>
 <tr>
-<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Demo GIF 1" width="400" /></td>
-<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Demo GIF 2" width="400" /></td>
+<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Demo GIF 1" width="650" /></td>
+<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Demo GIF 2" width="650" /></td>
 </tr>
 </table>
 
