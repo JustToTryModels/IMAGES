@@ -1,5 +1,3 @@
-<img src="[https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Google_AI_Studio_2025-10-25T04_37_52.808Z.png?raw=true](https://s8.ezgif.com/tmp/ezgif-84dd5019fa98f90e.gif)" alt="Ticket" width="650" />
-
 # 🎫 Advanced Event Ticketing Customer Support Chatbot
 
 <div align="center">
