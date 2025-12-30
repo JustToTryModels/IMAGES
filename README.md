@@ -13,7 +13,7 @@
 
 [Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/) • [DistilGPT2 Model](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned) • [Classifier Model](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
 
-<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF.gif?raw=true" alt="Ticket" width="650" />
+<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Ticket" width="650" />
 </div>
 
 ---
@@ -668,7 +668,7 @@ def compute_metrics(eval_pred):
 ## 🎬 Demo
 
 <div align="center">
-<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF.gif?raw=true" alt="Ticket" width="650" />
+<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Ticket" width="650" />
 <img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Ticket" width="650" />
 
 ### 🌐 [Try the Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/)
