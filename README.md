@@ -345,7 +345,7 @@ Training Loss Over Epochs:
 █ Epoch 3:  ████████████████████████████                  0.1555           █
 █ Epoch 4:  ██████████████████████████                    0.1331           █
 █ Epoch 5:  ████████████████████████                      0.1233           █
-█ Epoch 6:  ██████████████████████                        0.1141           █
+█ Epoch 6:  ██████████████████████████                    0.1141           █
 █ Epoch 7:  ████████████████████                          0.1062           █
 █ Epoch 8:  ██████████████████                            0.0999           █
 █ Epoch 9:  ████████████████                              0.0946           █
@@ -671,8 +671,12 @@ def compute_metrics(eval_pred):
 
 <table>
 <tr>
-<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Demo GIF 1" width="500" /></td>
-<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Demo GIF 2" width="500" /></td>
+<td align="center"><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="In-Domain Query Demo" width="500" /></td>
+<td align="center"><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Out-of-Domain Query Demo" width="500" /></td>
+</tr>
+<tr>
+<td align="center"><b>✅ In-Domain Query Response</b><br><i>Event ticketing related queries handled with detailed responses</i></td>
+<td align="center"><b>🚫 Out-of-Domain Query Response</b><br><i>Off-topic queries gracefully declined with polite fallback</i></td>
 </tr>
 </table>
 
