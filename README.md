@@ -13,14 +13,6 @@
 
 [Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/) • [DistilGPT2 Model](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned) • [Classifier Model](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/)
-[![DistilGPT2 Model](https://img.shields.io/badge/🤗_Model-DistilGPT2-yellow?style=for-the-badge)](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned)
-[![Classifier Model](https://img.shields.io/badge/🤗_Model-Classifier-yellow?style=for-the-badge)](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
-
-[![Open in Streamlit](https://img.shields.io/badge/Open_in-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/)
-[![DistilGPT2 Model](https://img.shields.io/badge/🤗_HuggingFace-DistilGPT2-yellow?style=for-the-badge)](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned)
-[![Classifier Model](https://img.shields.io/badge/🤗_HuggingFace-Classifier-yellow?style=for-the-badge)](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
-
 <img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Google_AI_Studio_2025-10-25T04_37_52.808Z.png?raw=true" alt="Ticket" width="650" />
 
 </div>
