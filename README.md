@@ -676,7 +676,7 @@ def compute_metrics(eval_pred):
 </tr>
 <tr>
 <td align="center"><b>✅ In-Domain Query Response</b><br><i>Event ticketing related queries handled with detailed responses</i></td>
-<td align="center"><b>🚫 Out-of-Domain Query Response</b><br><i>Off-topic queries gracefully declined with polite fallback</i></td>
+<td align="center"><b>🚫 Out-of-Domain Query Response</b><br><i>Off-topic queries gracefully declined with polite fallback response</i></td>
 </tr>
 </table>
 
