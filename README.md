@@ -695,8 +695,7 @@ Advanced-Event-Ticketing-Chatbot/
 │   ├── Bitext-events-ticketing-llm-chatbot-training-dataset.csv   # Response generation data
 │   ├── Full_data_for_classification_55413.csv                     # Main classifier dataset
 │   ├── extra-large-out-of-domain.csv                              # OOD samples for robustness
-│   ├── identity_creator_Extended_2892.csv                         # Personality & identity data
-│   └── Google_AI_Studio_2025-10-25T04_37_52.808Z.png              # Chatbot AI Image
+│   └── identity_creator_Extended_2892.csv                         # Personality & identity data
 │
 ├── Notebook/                   # 2. Model Training
 │   ├── Advanced_Event_Ticketing_Chatbot_DistilGPT2_FineTuned.ipynb # Response model training
