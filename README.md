@@ -13,7 +13,7 @@
 
 [Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/) • [DistilGPT2 Model](https://huggingface.co/IamPradeep/AETCSCB_OOD_IC_DistilGPT2_Fine-tuned) • [Classifier Model](https://huggingface.co/IamPradeep/Query_Classifier_DistilBERT)
 
-<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Ticket" width="650" />
+<img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Images%20&%20GIFs/In-Domain%20Respose%20GIF.gif?raw=true" alt="Ticket" width="650" />
 </div>
 
 ---
@@ -671,8 +671,8 @@ def compute_metrics(eval_pred):
 
 <table>
 <tr>
-<td align="center"><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="In-Domain Query Demo" width="500" /></td>
-<td align="center"><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Out-of-Domain Query Demo" width="500" /></td>
+<td align="center"><img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Images%20&%20GIFs/In-Domain%20Respose%20GIF.gif?raw=true" alt="In-Domain Query Demo" width="500" /></td>
+<td align="center"><img src="https://github.com/MarpakaPradeepSai/Advanced-Event-Ticketing-Customer-Support-Chatbot/blob/main/Data/Images%20&%20GIFs/OOD%20Respose%20GIF.gif?raw=true" alt="Out-of-Domain Query Demo" width="500" /></td>
 </tr>
 <tr>
 <td align="center"><b>✅ In-Domain Query Response</b><br><i>Event ticketing related queries handled with detailed responses</i></td>
