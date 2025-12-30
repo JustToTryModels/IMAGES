@@ -726,7 +726,7 @@ Advanced-Event-Ticketing-Chatbot/
 ├── Notebook/                   # 2. Model Training
 │   ├── Advanced_Event_Ticketing_Chatbot_DistilGPT2_FineTuned.ipynb # Response model training
 │   ├── Chatbot_Query_Classifier_DistilBERT_Fine_tuned.ipynb        # Intent model training
-│   └── Inference_(DistilBERT+DistilGPT2).ipynb                   # Local model testing
+│   └── Inference_(DistilBERT+DistilGPT2).ipynb                     # Local model testing
 │
 ├── Advanced_Chatbot.py         # 3. Main Streamlit Application
 ├── requirements.txt            # 4. Project Dependencies
