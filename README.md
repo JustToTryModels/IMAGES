@@ -684,41 +684,6 @@ def compute_metrics(eval_pred):
 
 </div>
 
-### Features Showcase
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-**📏 Query Validation**
-
-Length check before processing
-
-</td>
-<td align="center" width="25%">
-
-**✏️ Spell Correction**
-
-Automatic typo correction
-
-</td>
-<td align="center" width="25%">
-
-**🏷️ Entity Extraction**
-
-GLiNER-powered detection
-
-</td>
-<td align="center" width="25%">
-
-**💬 Streaming Response**
-
-Real-time word-by-word display
-
-</td>
-</tr>
-</table>
-
 ---
 
 ## 📁 Project Structure
