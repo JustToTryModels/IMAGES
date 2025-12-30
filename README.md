@@ -668,8 +668,13 @@ def compute_metrics(eval_pred):
 ## 🎬 Demo
 
 <div align="center">
-<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Ticket" width="650" />
-<img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Ticket" width="650" />
+
+<table>
+<tr>
+<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%201.gif?raw=true" alt="Demo GIF 1" width="400" /></td>
+<td><img src="https://github.com/JustToTryModels/IMAGES/blob/main/Final%20GIF%202.gif?raw=true" alt="Demo GIF 2" width="400" /></td>
+</tr>
+</table>
 
 ### 🌐 [Try the Live Demo](https://advanced-event-ticketing-customer-support-chatbot.streamlit.app/)
 
