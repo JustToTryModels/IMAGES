@@ -1,6 +1,6 @@
-# Fashion MNIST CNN Classifier — TensorFlow & Keras
-
 <div align="center">
+  
+# Fashion MNIST CNN Classifier — TensorFlow & Keras
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -13,7 +13,7 @@
 
 <br/>
 
-**A deep Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify 10 fashion categories from the Fashion-MNIST dataset, achieving 93.89% test accuracy. This project demonstrates the complete end-to-end machine learning pipeline, from data preprocessing and model architecture design to training optimization and real-world inference. The trained model successfully identifies clothing items like T-shirts, trousers, dresses, shoes, and bags with high precision and recall, making it suitable for fashion e-commerce applications and image classification tasks.**
+**A deep Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify 10 fashion categories from the Fashion-MNIST dataset, achieving `93.89%` test accuracy. This project demonstrates the complete end-to-end machine learning pipeline, from data preprocessing and model architecture design to training optimization and real-world inference. The trained model successfully identifies clothing items like T-shirts, trousers, pullovers, dresses, coats, sandals, shirts, sneakers, bags, and ankle boots with high precision and recall, making it suitable for fashion e-commerce applications and image classification tasks.**
 
 <br/>
 
