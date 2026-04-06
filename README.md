@@ -1,3 +1,4 @@
+```markdown
 # Fashion MNIST CNN Classifier — TensorFlow & Keras
 
 <div align="center">
@@ -45,6 +46,8 @@
 
 This project demonstrates the complete lifecycle of a production-grade image classification pipeline:
 
+<div align="center">
+
 | Phase | Description |
 |-------|-------------|
 | **Theory** | In-depth coverage of CNN fundamentals — convolutions, pooling, activation functions, backpropagation, and famous architectures |
@@ -53,6 +56,8 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 | **Training** | Training with smart callbacks: `EarlyStopping`, `ModelCheckpoint`, and `ReduceLROnPlateau` |
 | **Evaluation** | Full classification report, confusion matrix, and training curve visualization |
 | **Inference** | Real-world image upload, preprocessing pipeline, and confidence-bar prediction visualization |
+
+</div>
 
 <br>
 
@@ -70,13 +75,19 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 
 ### Dataset Structure
 
+<div align="center">
+
 | Split | Images | Class Balance |
 |-------|--------|---------------|
 | Training | 60,000 | 6,000 per class |
 | Test | 10,000 | 1,000 per class |
 | **Total** | **70,000** | **Perfectly balanced** |
 
+</div>
+
 ### Categories & Labels
+
+<div align="center">
 
 | Label | Category | Label | Category |
 |-------|----------|-------|----------|
@@ -86,7 +97,11 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 | 3 | 👗 Dress | 8 | 👜 Bag |
 | 4 | 🧣 Coat | 9 | 👢 Ankle boot |
 
+</div>
+
 ### Image Characteristics
+
+<div align="center">
 
 | Property | Value |
 |----------|-------|
@@ -94,6 +109,8 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 | Color Space | Grayscale (single channel) |
 | Pixel Value Range | 0 – 255 (normalized to 0 – 1) |
 | Total Dataset Size | ~30 MB compressed |
+
+</div>
 
 <br>
 
@@ -127,6 +144,8 @@ CNNs address these limitations through three core principles:
 <details>
 <summary><strong>3. Core Building Blocks</strong></summary>
 
+<div align="center">
+
 | Layer | Role |
 |-------|------|
 | **Convolutional Layer** | Slides a learnable kernel across the input to produce a feature map |
@@ -136,6 +155,8 @@ CNNs address these limitations through three core principles:
 | **Dropout** | Randomly deactivates neurons during training to combat overfitting |
 | **Fully Connected Layers** | Combines extracted features for final classification |
 | **Softmax Output** | Converts raw logits into a valid probability distribution over 10 classes |
+
+</div>
 
 </details>
 
@@ -152,6 +173,8 @@ CNNs address these limitations through three core principles:
 <details>
 <summary><strong>5. Notable Architectures Referenced</strong></summary>
 
+<div align="center">
+
 | Architecture | Year | Key Innovation |
 |---|---|---|
 | LeNet-5 | 1998 | Pioneering CNN for digit recognition |
@@ -159,6 +182,8 @@ CNNs address these limitations through three core principles:
 | VGGNet | 2014 | Depth through stacked 3×3 convolutions |
 | GoogLeNet | 2014 | Inception modules with parallel convolutions |
 | ResNet | 2015 | Residual skip connections for very deep networks |
+
+</div>
 
 </details>
 
@@ -203,12 +228,16 @@ INPUT (28×28×1)
 
 ### Model Parameters
 
+<div align="center">
+
 | Metric | Value |
 |--------|-------|
 | Total Parameters | 1,015,530 |
 | Trainable Parameters | 1,013,098 |
 | Non-Trainable Parameters | 2,432 |
 | Model Size | ~3.87 MB |
+
+</div>
 
 <br>
 
@@ -233,13 +262,19 @@ datagen = ImageDataGenerator(
 
 ### Callbacks
 
+<div align="center">
+
 | Callback | Configuration | Purpose |
 |----------|--------------|---------|
 | `ModelCheckpoint` | `monitor='val_accuracy'` | Saves the best model weights to Google Drive |
 | `EarlyStopping` | `patience=15` | Halts training when validation accuracy plateaus |
 | `ReduceLROnPlateau` | `factor=0.5, patience=5` | Halves the learning rate upon loss stagnation |
 
+</div>
+
 ### Hyperparameters
+
+<div align="center">
 
 | Hyperparameter | Value |
 |----------------|-------|
@@ -251,6 +286,8 @@ datagen = ImageDataGenerator(
 | Early Stopping Epoch | 67 (best weights from Epoch 52) |
 | Random Seed | 42 |
 
+</div>
+
 <br>
 
 ---
@@ -259,12 +296,18 @@ datagen = ImageDataGenerator(
 
 ### Test Set Performance
 
+<div align="center">
+
 | Metric | Value |
 |--------|-------|
 | **Test Accuracy** | **93.89%** |
 | **Test Loss** | **0.1721** |
 
+</div>
+
 ### Classification Report
+
+<div align="center">
 
 | Class | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
@@ -280,9 +323,13 @@ datagen = ImageDataGenerator(
 | Ankle boot | 0.99 | 0.96 | 0.97 |
 | **Macro Avg** | **0.94** | **0.94** | **0.94** |
 
+</div>
+
 > **Key Insight:** The `Shirt` class achieves the lowest F1-score (0.81) due to visual similarity with `T-shirt/top` and `Coat` — a well-documented challenge in the Fashion-MNIST literature. `Trouser` achieves a perfect 1.00 F1-score.
 
 ### Training Progression (Selected Epochs)
+
+<div align="center">
 
 | Epoch | Train Accuracy | Val Accuracy |
 |-------|---------------|--------------|
@@ -292,6 +339,8 @@ datagen = ImageDataGenerator(
 | 32 | 92.29% | 93.22% |
 | **52 (Best)** | **93.75%** | **93.89%** |
 | 67 (Stopped) | 94.03% | — |
+
+</div>
 
 <br>
 
@@ -420,6 +469,8 @@ pip install -r requirements.txt
 
 ## ⚠️ Limitations
 
+<div align="center">
+
 | Limitation | Detail |
 |------------|--------|
 | **Class Confusion** | Shirts, T-shirts, and Coats share overlapping visual features, resulting in the lowest per-class F1-score |
@@ -427,6 +478,8 @@ pip install -r requirements.txt
 | **Grayscale Only** | Color information — often critical for fashion classification — is absent |
 | **Domain Gap** | Real-world images require careful preprocessing to match the dataset's centered, dark-background format |
 | **No Rotational Invariance** | Standard CNNs do not inherently handle rotated inputs |
+
+</div>
 
 ---
 
@@ -455,3 +508,4 @@ Made with ❤️ and a lot of convolutions
 ⭐ **Star this repo if you found it helpful!** ⭐
 
 </div>
+```
