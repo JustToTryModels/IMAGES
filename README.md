@@ -17,8 +17,6 @@
 
 <br/>
 
-[🚀 Open in Colab](#getting-started) · [📊 Results](#results) · [🧠 Model Architecture](#model-architecture) · [📖 Theory](#cnn-theory)
-
 </div>
 
 <br>
