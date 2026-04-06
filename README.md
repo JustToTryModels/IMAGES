@@ -412,7 +412,7 @@ The output visualization includes three panels:
 
 ### Option 1: Google Colab (Recommended)
 
-1. Open the notebook in [Google Colab](https://colab.research.google.com/)
+1. Open the notebook in [Google Colab](https://colab.research.google.com/github/MarpakaPradeepSai/CNN-Fashion-MNIST-Image-Classifier/blob/main/Notebook/Fashion_MNIST_TF.ipynb)
 2. Connect to a GPU runtime: `Runtime → Change runtime type → T4 GPU`
 3. Mount Google Drive when prompted
 4. Run all cells sequentially (`Runtime → Run all`)
