@@ -235,7 +235,7 @@ INPUT (28×28×1)
 | Total Parameters | 1,015,530 |
 | Trainable Parameters | 1,013,098 |
 | Non-Trainable Parameters | 2,432 |
-| Model Size | ~3.87 MB |
+| Model Size | 11.7 MB |
 
 </div>
 
