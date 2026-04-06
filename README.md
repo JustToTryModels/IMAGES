@@ -200,19 +200,19 @@ INPUT (28×28×1)
     │
     ▼
 ┌─────────────────────────────────┐
-│  BLOCK 1 — Conv2D(32) × 2      │
+│  BLOCK 1 — Conv2D(32) × 2       │
 │  BatchNorm → MaxPool → Dropout  │  Output: 14×14×32
 └─────────────────────────────────┘
     │
     ▼
 ┌─────────────────────────────────┐
-│  BLOCK 2 — Conv2D(64) × 2      │
+│  BLOCK 2 — Conv2D(64) × 2       │
 │  BatchNorm → MaxPool → Dropout  │  Output: 7×7×64
 └─────────────────────────────────┘
     │
     ▼
 ┌─────────────────────────────────┐
-│  BLOCK 3 — Conv2D(128) × 2     │
+│  BLOCK 3 — Conv2D(128) × 2      │
 │  BatchNorm → MaxPool → Dropout  │  Output: 3×3×128
 └─────────────────────────────────┘
     │
@@ -501,6 +501,8 @@ pip install -r requirements.txt
 | **No Rotational Invariance** | Standard CNNs do not inherently handle rotated inputs |
 
 </div>
+
+<br>
 
 ---
 
