@@ -1,4 +1,3 @@
-```markdown
 # Fashion MNIST CNN Classifier — TensorFlow & Keras
 
 <div align="center">
