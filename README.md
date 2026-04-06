@@ -13,7 +13,7 @@
 
 <br/>
 
-**A deep Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify 10 fashion categories from the Fashion-MNIST dataset, achieving 93.89% test accuracy.**
+**A deep Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify 10 fashion categories from the Fashion-MNIST dataset, achieving 93.89% test accuracy. This project demonstrates the complete end-to-end machine learning pipeline, from data preprocessing and model architecture design to training optimization and real-world inference. The trained model successfully identifies clothing items like T-shirts, trousers, dresses, shoes, and bags with high precision and recall, making it suitable for fashion e-commerce applications and image classification tasks.**
 
 <br/>
 
