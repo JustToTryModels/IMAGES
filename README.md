@@ -406,8 +406,8 @@ The output visualization includes three panels:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/fashion-mnist-cnn.git
-cd fashion-mnist-cnn
+git clone https://github.com/MarpakaPradeepSai/CNN-Fashion-MNIST-Image-Classifier.git
+cd CNN-Fashion-MNIST-Image-Classifier
 
 # 2. Create and activate a virtual environment
 python -m venv venv
