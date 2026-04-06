@@ -63,7 +63,7 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 **Fashion-MNIST** is a benchmark dataset created by Zalando Research as a more challenging replacement for the classic MNIST digit dataset.
 
 <div align="center">
-  <img src="https://datasets.activeloop.ai/wp-content/uploads/2022/09/Fashion-MNIST-dataset-Activeloop-Platform-visualization-image-1.webp" width="700" alt="Fashion-MNIST Dataset Preview"/>
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fQiUzijdHlukruf9akgH2Q.png" width="700" alt="Fashion-MNIST Dataset Preview"/>
 </div>
 
 <br/>
