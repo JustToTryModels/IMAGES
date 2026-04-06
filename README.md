@@ -435,7 +435,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 
 # 4. Launch Jupyter Notebook
-jupyter notebook Notebook/Fashion_MNIST_TF.ipynb
+jupyter notebook Notebook/Fashion_MNIST_CNN.ipynb
 ```
 
 > **Note:** Remove or comment out all `from google.colab import drive` and `drive.mount(...)` calls when running locally. Update `model_path` to a local directory of your choice.
