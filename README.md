@@ -1,3 +1,4 @@
+```markdown
 # Fashion MNIST CNN Classifier — TensorFlow & Keras
 
 <div align="center">
@@ -32,6 +33,7 @@
 - [Training Pipeline](#-training-pipeline)
 - [Results](#-results)
 - [Inference](#-inference)
+- [Demo](#-demo)
 - [Getting Started](#-getting-started)
 - [Project Structure](#-project-structure)
 - [Dependencies](#-dependencies)
@@ -391,6 +393,22 @@ The output visualization includes three panels:
 
 ---
 
+## 🎮 Demo
+
+<div align="center">
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cnn-fashion-mnist-image-classifier.streamlit.app/)
+
+<br/>
+
+<img src="https://github.com/MarpakaPradeepSai/CNN-Fashion-MNIST-Image-Classifier/blob/main/MNIST.gif?raw=true" width="700" alt="App Demo"/>
+
+</div>
+
+<br>
+
+---
+
 ## 🚀 Getting Started
 
 ### Option 1: Google Colab (Recommended)
@@ -418,7 +436,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 
 # 4. Launch Jupyter Notebook
-jupyter notebook Fashion_MNIST_CNN.ipynb
+jupyter notebook Notebook/Fashion_MNIST_TF.ipynb
 ```
 
 > **Note:** Remove or comment out all `from google.colab import drive` and `drive.mount(...)` calls when running locally. Update `model_path` to a local directory of your choice.
@@ -430,15 +448,20 @@ jupyter notebook Fashion_MNIST_CNN.ipynb
 ## 📁 Project Structure
 
 ```
-fashion-mnist-cnn/
+CNN-Fashion-MNIST-Image-Classifier/
 │
-├── 📓 Fashion_MNIST_CNN.ipynb       # Main notebook (theory + training + inference)
+├── 📁 Model/                            # Saved model directory
+│   ├── 📄 README.md
+│   └── 🧠 fashion_mnist_best_model.keras
 │
-├── 📄 requirements.txt              # Python dependencies
-├── 📄 README.md                     # Project documentation
+├── 📁 Notebook/                         # Training notebook directory
+│   ├── 📓 Fashion_MNIST_TF.ipynb        # Main notebook (theory + training + inference)
+│   └── 📄 README.md
 │
-└── 📁 saved_models/                 # (Generated after training)
-    └── fashion_mnist_best_model.keras
+├── 🐍 fashion.py                        # Streamlit app script
+├── 📄 requirements.txt                  # Python dependencies
+├── 📄 README.md                         # Project documentation
+└── 📄 LICENSE
 ```
 
 <br>
