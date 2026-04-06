@@ -526,7 +526,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 Made with ❤️ and a lot of convolutions
 
-⭐ **Star this repo if you found it helpful!** ⭐
-
 </div>
-```
