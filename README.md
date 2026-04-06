@@ -21,6 +21,8 @@
 
 </div>
 
+<br>
+
 ---
 
 ## 📋 Table of Contents
@@ -37,6 +39,8 @@
 - [Dependencies](#-dependencies)
 - [Limitations](#-limitations)
 
+<br>
+
 ---
 
 ## 🔍 Project Overview
@@ -51,6 +55,8 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 | **Training** | Training with smart callbacks: `EarlyStopping`, `ModelCheckpoint`, and `ReduceLROnPlateau` |
 | **Evaluation** | Full classification report, confusion matrix, and training curve visualization |
 | **Inference** | Real-world image upload, preprocessing pipeline, and confidence-bar prediction visualization |
+
+<br>
 
 ---
 
@@ -90,6 +96,8 @@ This project demonstrates the complete lifecycle of a production-grade image cla
 | Color Space | Grayscale (single channel) |
 | Pixel Value Range | 0 – 255 (normalized to 0 – 1) |
 | Total Dataset Size | ~30 MB compressed |
+
+<br>
 
 ---
 
@@ -156,6 +164,8 @@ CNNs address these limitations through three core principles:
 
 </details>
 
+<br>
+
 ---
 
 ## 🏗️ Model Architecture
@@ -202,6 +212,8 @@ INPUT (28×28×1)
 | Non-Trainable Parameters | 2,432 |
 | Model Size | ~3.87 MB |
 
+<br>
+
 ---
 
 ## 🔧 Training Pipeline
@@ -240,6 +252,8 @@ datagen = ImageDataGenerator(
 | Max Epochs | 100 |
 | Early Stopping Epoch | 67 (best weights from Epoch 52) |
 | Random Seed | 42 |
+
+<br>
 
 ---
 
@@ -280,6 +294,8 @@ datagen = ImageDataGenerator(
 | 32 | 92.29% | 93.22% |
 | **52 (Best)** | **93.75%** | **93.89%** |
 | 67 (Stopped) | 94.03% | — |
+
+<br>
 
 ---
 
@@ -325,6 +341,8 @@ The output visualization includes three panels:
 2. **Preprocessed 28×28 grayscale image** (model input)
 3. **Horizontal confidence bar chart** for all 10 classes (sorted by confidence)
 
+<br>
+
 ---
 
 ## 🚀 Getting Started
@@ -359,6 +377,8 @@ jupyter notebook Fashion_MNIST_CNN.ipynb
 
 > **Note:** Remove or comment out all `from google.colab import drive` and `drive.mount(...)` calls when running locally. Update `model_path` to a local directory of your choice.
 
+<br>
+
 ---
 
 ## 📁 Project Structure
@@ -374,6 +394,8 @@ fashion-mnist-cnn/
 └── 📁 saved_models/                 # (Generated after training)
     └── fashion_mnist_best_model.keras
 ```
+
+<br>
 
 ---
 
@@ -394,6 +416,8 @@ Install all at once:
 pip install -r requirements.txt
 ```
 
+<br>
+
 ---
 
 ## ⚠️ Limitations
@@ -412,6 +436,8 @@ pip install -r requirements.txt
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
+<br>
+
 ---
 
 ## 🙏 Acknowledgements
@@ -419,6 +445,8 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 - **[Zalando Research](https://github.com/zalandoresearch/fashion-mnist)** — for creating and open-sourcing the Fashion-MNIST dataset
 - **[TensorFlow / Keras Team](https://www.tensorflow.org/)** — for the deep learning framework
 - **[Yann LeCun et al.](http://yann.lecun.com/exdb/lenet/)** — for the pioneering work on CNNs
+
+<br>
 
 ---
 
