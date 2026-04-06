@@ -470,12 +470,12 @@ CNN-Fashion-MNIST-Image-Classifier/
 ## 📦 Dependencies
 
 ```txt
-tensorflow>=2.10.0
-numpy>=1.23.0
-matplotlib>=3.5.0
-scikit-learn>=1.1.0
+streamlit==1.47.1
+tensorflow==2.20.0rc0
+numpy==2.3.2
+Pillow==11.3.0
 seaborn>=0.12.0
-Pillow>=9.0.0
+matplotlib==3.10.3
 ```
 
 Install all at once:
